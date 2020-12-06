@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <ul>
+        <a href="{% url 'home' %}"><li>Главная</li></a>
+        <a href="{% url 'about' %}"><li>О нас</li></a>
+        <a href="{% url 'news' %}"><li>Новости</li></a>
+    </ul>
+    {% block content %}
+    {% endblock %}
+    {% include 'main/test.html' %}
+</body>
+</html>
