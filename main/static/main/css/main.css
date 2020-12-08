@@ -2,3 +2,13 @@ body{
     background-color: blueviolet;
     color: aliceblue;
 }
+.list_menu{
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+}
+.list_menu>a{
+    color: aliceblue;
+    font-size: larger;
+    text-decoration: none;
+}

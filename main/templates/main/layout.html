@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
-    <ul>
-        <a href="{% url 'home' %}"><li>Главная</li></a>
-        <a href="{% url 'about' %}"><li>О нас</li></a>
-        <a href="{% url 'news' %}"><li>Новости</li></a>
-    </ul>
+    <div class="main_menu">
+        <ul class="list_menu">
+            <a href="{% url 'home' %}"><li>Главная</li></a>
+            <a href="{% url 'about' %}"><li>О нас</li></a>
+            <a href="{% url 'news' %}"><li>Новости</li></a>
+        </ul>
+    </div>
+    
     {% block content %}
     {% endblock %}
     {% include 'main/test.html' %}

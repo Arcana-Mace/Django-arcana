@@ -3,8 +3,20 @@
 {% block title %}Новости{% endblock %}
 
 {% block content %}
-    <h3>Новости про Django</h3>
-    <br>
-    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus odio aliquam ducimus rerum explicabo incidunt ab non optio dolorum ipsam porro veritatis maxime quia, doloremque quas est nihil odit earum!'</span>
-    {{ news }}
+    <div class="news-django">
+        <h3>Новости про Django</h3>
+        <br>
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus odio aliquam     ducimus rerum explicabo incidunt ab non optio dolorum ipsam porro veritatis maxime quia,     doloremque quas est nihil odit earum!'</span>
+        <div class="element_news">
+
+            {% for el in news %}
+                <h4>{{ el.title }}</h4>
+                <p>{{ el.anons }}</p>
+                <p>{{ el.text }}</p>
+                <p>{{ el.date }}</p>
+            {% endfor %}
+
+        </div>
+    </div>
+    
 {% endblock %}
