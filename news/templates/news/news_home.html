@@ -10,10 +10,13 @@
         <div class="element_news">
 
             {% for el in news %}
-                <h4>{{ el.title }}</h4>
-                <p>{{ el.anons }}</p>
-                <p>{{ el.text }}</p>
-                <p>{{ el.date }}</p>
+                <div class="news_block">
+                    <h4>{{ el.title }}</h4>
+                    <p>{{ el.anons }}</p>
+                    <p>{{ el.text }}</p>
+                    <p>{{ el.date }}</p>
+                  
+                </div>
             {% endfor %}
 
         </div>
